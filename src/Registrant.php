@@ -89,7 +89,7 @@ class Registrant implements InjectionAwareInterface
      *
      * @param DiInterface $dependencyInjector
      */
-    public function setDI($dependencyInjector)
+    public function setDI(\Phalcon\DiInterface $dependencyInjector)
     {
         $this->di = $dependencyInjector;
     }
