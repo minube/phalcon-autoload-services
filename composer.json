@@ -1,15 +1,9 @@
 {
-    "name": "getsky/phalcon-autoload-services",
+    "name": "minube/phalcon-autoload-services",
     "type": "library",
     "description": "Components for automatic registration services in Dependency Injection",
     "keywords": [ "framework", "phalcon", "di", "dependency injection" ],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "JimmDiGrizli",
-            "email": "getmansk-y@yandex.ru"
-        }
-    ],
     "require": {
         "php": ">=5.4",
         "ext-phalcon": ">=1.2.4"
