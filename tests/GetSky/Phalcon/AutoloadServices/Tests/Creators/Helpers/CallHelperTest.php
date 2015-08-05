@@ -31,7 +31,7 @@ class CallHelperTest extends HelperTest
 
         $this->assertEquals($arguments, $this->helper->preparation());
 
-        $config = new Config(['0' => new Config(['method' => '%off%'])]);
+        $config = new Config(array('0' => new Config(array('method' => '%off%'))));
         $this->helper->setConfig($config);
         $this->assertNull($this->helper->preparation());
     }
