@@ -14,7 +14,7 @@ class Creator
     /**
      * @var array Array with supported types of services
      */
-    protected static $types = ['string', 'object','obj', 'instance', 'provider'];
+    protected static $types = array('string', 'object', 'obj', 'instance', 'provider');
 
     /**
      * @var DiInterface
