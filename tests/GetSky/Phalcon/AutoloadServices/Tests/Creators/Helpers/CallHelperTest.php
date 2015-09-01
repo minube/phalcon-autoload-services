@@ -19,20 +19,19 @@ class CallHelperTest extends HelperTest
 
     public function testPreparation()
     {
-        $arguments = [
-            '0' => [
+        $arguments = array(
+            '0' => array(
                 'method' => 'run',
-                'arguments' => [
+                'arguments' => array(
                     '0' => 240,
                     '1' => new CallService()
-                ]
-            ]
-
-        ];
+                )
+            )
+        );
 
         $this->assertEquals($arguments, $this->helper->preparation());
 
-        $config = new Config(['0' => new Config(['method' => '%off%'])]);
+        $config = new Config(array('0' => new Config(array('method' => '%off%'))));
         $this->helper->setConfig($config);
         $this->assertNull($this->helper->preparation());
     }

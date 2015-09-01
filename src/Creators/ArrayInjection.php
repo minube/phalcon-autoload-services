@@ -7,12 +7,12 @@ use Phalcon\Config;
 use Phalcon\DiInterface;
 
 /**
- * Class helps register services in the dependency injection using string.
+ * Class helps register services in the dependency injection using array.
  *
  * Class StringInjection
  * @package GetSky\Phalcon\AutoloadServices\Creators
  */
-class StringInjection extends AbstractInjection
+class ArrayInjection extends AbstractInjection
 {
     /**
      * @return string

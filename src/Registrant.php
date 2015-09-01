@@ -2,9 +2,7 @@
 namespace GetSky\Phalcon\AutoloadServices;
 
 use GetSky\Phalcon\AutoloadServices\Creators\AbstractCreator;
-use GetSky\Phalcon\AutoloadServices\Creators\AbstractInjection;
 use GetSky\Phalcon\AutoloadServices\Creators\Creator;
-use GetSky\Phalcon\AutoloadServices\Exception\BadTypeException;
 use GetSky\Phalcon\AutoloadServices\Exception\DiNotFoundException;
 use Phalcon\Config;
 use Phalcon\DI\InjectionAwareInterface;
@@ -53,7 +51,8 @@ class Registrant implements InjectionAwareInterface
             $service = $creator->injection();
 
             if ($service !== null) {
-                $call = $settings->get('shared') ? 'setShared' : 'set';
+                $call = $settings->get('shared') == null ? 'setShared' : 'set';
+                var_dump($call);
                 $this->getDI()->$call($name, $service);
             }
         }
@@ -91,7 +90,7 @@ class Registrant implements InjectionAwareInterface
      *
      * @param DiInterface $dependencyInjector
      */
-    public function setDI($dependencyInjector)
+    public function setDI(\Phalcon\DiInterface $dependencyInjector)
     {
         $this->di = $dependencyInjector;
     }
