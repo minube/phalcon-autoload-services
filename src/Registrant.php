@@ -52,7 +52,6 @@ class Registrant implements InjectionAwareInterface
 
             if ($service !== null) {
                 $call = $settings->get('shared') == null ? 'setShared' : 'set';
-                var_dump($call);
                 $this->getDI()->$call($name, $service);
             }
         }
